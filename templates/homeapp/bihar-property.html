@@ -1,0 +1,953 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <!-- Owl Carousel CSS -->
+    <link href="{% static 'css/owl.css' %}" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/nice.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" />
+    <link href="{% static 'css/stylemain.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style4.css' %}" rel="stylesheet" />
+    <title>
+        Umeed Nagar Township
+    </title>
+    <style type="text/css">
+        @media(max-width:768px) {
+            .col-sm-6 {
+                text-align: left;
+                padding-left: 30px;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 600px;
+                margin: 1.75rem auto;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            font-size: 14px;
+            padding: 10px 12px;
+            color: #727280;
+            text-transform: capitalize;
+            z-index: 1000;
+            font-weight: normal;
+        }
+
+        .navbar li {
+            line-height: inherit;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            float: left;
+        }
+
+        .cntc {
+            background: #b71c1c;
+            color: #fff !important;
+            border-radius: 10px;
+        }
+
+        .navbar-light .navbar-nav .active>.cntc,
+        .i {
+            color: #fff !important;
+        }
+
+        .contact {
+            min-height: 20px;
+            padding: 19px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 0px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style type="text/css">
+        .btn:focus,
+        .btn:active,
+        button:focus,
+        button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .fa {
+            color: #e70c07;
+            font-size: 11px;
+        }
+
+        #image-gallery .modal-footer {
+            display: block;
+        }
+
+        .thumb {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            left: 20px;
+            bottom: 15px;
+            position: absolute;
+            left: 30px;
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        @media(min-width:992px) {
+            .flex-viewport {
+                max-height: 500px;
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+            }
+        }
+
+        .clr-row {
+            background: #15336e;
+            color: #fff;
+            padding-top: 10px;
+        }
+
+        .text-white {
+            color: #fff !important;
+        }
+
+        .media-heading {
+            margin: 0 0 5px;
+        }
+
+        h4,
+        .h4 {
+            font-size: 18px;
+        }
+
+        .media-body {
+            float: left !important;
+            padding-left: 10px;
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-2 {
+                width: 18%;
+            }
+        }
+
+        .flexslider {
+            border: 0px;
+        }
+
+        p span {
+            color: #333;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .single_item {
+            background: #f7f7f7;
+            padding: 28px 0 25px 0;
+            margin: 0px 10px;
+            /*width: 290.75px;*/
+            text-align: center;
+        }
+
+        .ico i {
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .ico {
+            width: 70px;
+            height: 70px;
+            position: relative;
+            left: calc(50% - 35px);
+            background: #e4000f;
+            text-align: center;
+            color: #fff;
+            border-radius: 40%;
+            padding-top: 20px;
+            position: static;
+            margin: 0 auto 19px auto;
+            -webkit-border-radius: 50%;
+        }
+
+        .text>h5 {
+            color: #252525;
+        }
+
+        @media(max-width:768px) {
+            .col-sm-6 {
+                text-align: left;
+                /*padding-left: 30px;*/
+                width: 50%;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        let modalId = $('#image-gallery');
+
+        $(document)
+            .ready(function () {
+
+                loadGallery(true, 'a.thumbnail');
+
+                //This function disables buttons when needed
+                function disableButtons(counter_max, counter_current) {
+                    $('#show-previous-image, #show-next-image')
+                        .show();
+                    if (counter_max === counter_current) {
+                        $('#show-next-image')
+                            .hide();
+                    } else if (counter_current === 1) {
+                        $('#show-previous-image')
+                            .hide();
+                    }
+                }
+
+                function loadGallery(setIDs, setClickAttr) {
+                    let current_image,
+                        selector,
+                        counter = 0;
+
+                    $('#show-next-image, #show-previous-image')
+                        .click(function () {
+                            if ($(this)
+                                .attr('id') === 'show-previous-image') {
+                                current_image--;
+                            } else {
+                                current_image++;
+                            }
+
+                            selector = $('[data-image-id="' + current_image + '"]');
+                            updateGallery(selector);
+                        });
+
+                    function updateGallery(selector) {
+                        let $sel = selector;
+                        current_image = $sel.data('image-id');
+                        $('#image-gallery-title')
+                            .text($sel.data('title'));
+                        $('#image-gallery-image')
+                            .attr('src', $sel.data('image'));
+                        disableButtons(counter, $sel.data('image-id'));
+                    }
+
+                    if (setIDs == true) {
+                        $('[data-image-id]')
+                            .each(function () {
+                                counter++;
+                                $(this)
+                                    .attr('data-image-id', counter);
+                            });
+                    }
+                    $(setClickAttr)
+                        .on('click', function () {
+                            updateGallery($(this));
+                        });
+                }
+            });
+
+        // build key actions
+        $(document)
+            .keydown(function (e) {
+                switch (e.which) {
+                    case 37: // left
+                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                            $('#show-previous-image')
+                                .click();
+                        }
+                        break;
+
+                    case 39: // right
+                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                            $('#show-next-image')
+                                .click();
+                        }
+                        break;
+
+                    default:
+                        return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+
+    </script>
+    <script type="text/javascript">
+        let modalId1 = $('#image-gallery1');
+
+        $(document)
+            .ready(function () {
+
+                loadGallery(true, 'a.thumbnail');
+
+                //This function disables buttons when needed
+                function disableButtons(counter_max, counter_current) {
+                    $('#show-previous-image1, #show-next-image1')
+                        .show();
+                    if (counter_max === counter_current) {
+                        $('#show-next-image1')
+                            .hide();
+                    } else if (counter_current === 1) {
+                        $('#show-previous-image1')
+                            .hide();
+                    }
+                }
+
+                function loadGallery(setIDs, setClickAttr) {
+                    let current_image,
+                        selector,
+                        counter = 0;
+
+                    $('#show-next-image1, #show-previous-image1')
+                        .click(function () {
+                            if ($(this)
+                                .attr('id') === 'show-previous-image1') {
+                                current_image--;
+                            } else {
+                                current_image++;
+                            }
+
+                            selector = $('[data-image-id="' + current_image + '"]');
+                            updateGallery(selector);
+                        });
+
+                    function updateGallery(selector) {
+                        let $sel = selector;
+                        current_image = $sel.data('image-id1');
+                        $('#image-gallery-title1')
+                            .text($sel.data('title'));
+                        $('#image-gallery-image1')
+                            .attr('src', $sel.data('image'));
+                        disableButtons(counter, $sel.data('image-id1'));
+                    }
+
+                    if (setIDs == true) {
+                        $('[data-image-id1]')
+                            .each(function () {
+                                counter++;
+                                $(this)
+                                    .attr('data-image-id1', counter);
+                            });
+                    }
+                    $(setClickAttr)
+                        .on('click', function () {
+                            updateGallery($(this));
+                        });
+                }
+            });
+
+        // build key actions
+        $(document)
+            .keydown(function (e) {
+                switch (e.which) {
+                    case 37: // left
+                        if ((modalId1.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                            $('#show-previous-image1')
+                                .click();
+                        }
+                        break;
+
+                    case 39: // right
+                        if ((modalId1.data('bs.modal') || {})._isShown && $('#show-next-image1').is(":visible")) {
+                            $('#show-next-image1')
+                                .click();
+                        }
+                        break;
+
+                    default:
+                        return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+
+    </script>
+</head>
+<div class="header-wrap wow fadeInUp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 navbar navbar-expand-lg navbar-light ">
+                <div class="header_logo">
+                    <img src="{% static 'image/umeednagar.png' %}" />
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            </div>
+            <div class="col-lg-10">
+                <nav class="navbar navbar-expand-lg navbar-light text-left">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <button class="close-toggler" type="button" data-toggle="offcanvas"><span><i
+                                    class="fas fa-times-circle" aria-hidden="true"></i></span></button>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'homepage' %}">Home </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#amenties">Amenities</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#unit">Unit Details </a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#gallery">Gallery </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#map">Map View </a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Downloads <span class="caret"><i
+                                            class="fas fa-caret-down"></i></span></a><i class="fas fa-caret-down"></i>
+                                <ul class="submenu">
+                                    <li><a href="#">Brochure</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item active " style="margin-left:10px">
+                                <button type="button" class="nav-link cntc" data-toggle="modal" data-target="#myModal"
+                                    style="border: red"><i class="fa fa-envelope i"></i>&nbsp;Click Here to Contact
+                                    Us</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Header End-->
+<div class="innercontent">
+    <div class="row">
+        <div class="col-lg-12" style="padding:0px">
+            <div id="slider" class="flexslider wow fadeInUp">
+                <ul class="slides">
+                    <li>
+                        <img alt="" src="{% static 'image/biharslide1.jpg' %}" />
+                    </li>
+                    <li>
+                        <img alt="" src="{% static 'image/biharslide2.jpg' %}" />
+                    </li>
+                    <li>
+                        <img alt="" src="{% static 'image/biharslide3.jpg' %}" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="clr-row">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                    <ul class="media-list">
+                        <li class="media"><a href="#" class="pull-left">
+                                <img src="{% static 'image/location.png' %}" class="media-object" alt="Sample Image">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Address</h4>
+                                Biharsharif, Bihar
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
+                    <ul class="media-list">
+                        <li class="media"><a href="#" class="pull-left">
+                                <img src="{% static 'image/bed.png' %}" class="media-object" alt="Sample Image">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Bedroom
+                                </h4>
+                                3 Bedrooms
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
+                    <ul class="media-list">
+                        <li class="media"><a href="#" class="">
+                                <img src="{% static 'image/area.png' %}" class="media-object" alt="Sample Image">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Area Range
+                                </h4>
+                                888 - 1543 sqft
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                    <ul class="media-list">
+                        <li class="media"><a href="#" class="pull-left">
+                                <img src="{% static 'image/price.png' %}" class="media-object" alt="Sample Image">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Price</h4>
+                                42.51 Lakhs Onwards
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6 ">
+                    <ul class="media-list">
+                        <li class="media"><a href="#" class="pull-left">
+                                <img src="{% static 'image/projectkey.png' %}" class="media-object"
+                                    alt="Sample Image" />
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Project Type</h4>
+                                Duplex
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container" id="about">
+        <div class="row property_head wow fadeInUp" style="padding-top: 20px">
+            <div class="col-lg-12 col-md-12">
+                <h3 class="text-center">UMEED NAGAR TOWNSHIP</h3>
+                <div class="property_address text-center">Biharsharif, Bihar</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="">
+                    <div class="">
+                        <p class="text-justify">
+                            Umeed Nagar Township Provides a Great Life !!
+                            Step in to your luxury home in Biharsharif, Bihar.
+                            Nestled in 1000 sq.ft. of prime real estate, in the fast growing locality of Biharsharif,
+                            Umeed Nagar Township ushers in a lifestyle that is modern, luxurious and convenient.
+                            Uniquely designed and aesthetically proportional. Umeed Nagar Township offers 3 Bedrooms
+                            Spacious Duplex with numerous delightful benefits.
+                            Gathering all the advantages of Biharsharif, Umeed Nagar Township is a unique constellation
+                            of all the conveniences tagged with best connectivity. It is surely a world within reach.
+                            All in all it can be rightfully called a complete family package!
+
+                            From a well-appointed Duplex, exquisitelandscape gardens and outdoor sports, the array of
+                            privileges here, make it the perfect place to live.
+                            An oasis of calm in the mornings, the perfect party venue on weekends. Enjoy a wonderful
+                            lifestyle at Umeed Nagar Township.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <img src="{% static 'image/biharimage1.jpg' %}" class="img-fluid" style="width: 547px; height: 247px" />
+            </div>
+        </div>
+        <div class="row" style="padding-top: 30px; padding-bottom: 20px">
+            <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6 ">
+                <p class="cols">
+                    Project Area<br />
+                    <span>888 - 1543 Sqft.</span>
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                <p class="cols">
+                    Total No. of Duplex<br />
+                    <span>2</span>
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                <p class="cols">
+                    Total No. of Floors<br />
+                    <span>G+2</span>
+                </p>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                <p class="cols">
+                    Project Type<br />
+                    <span>Duplex</span>
+                </p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                <p class="cols">
+                    Open Space in Project<br />
+                    <span>40 %</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="container text-center my-3" id="amenties">
+        <h3 style="padding: 20px">AMENITIES</h3>
+        <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item row no-gutters active">
+
+                    <div class="col-3 float-left">
+                        <div class="single_item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ico">
+                                        <i class="fa fa-car"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <h5>Parking Area</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 float-left">
+                        <div class="single_item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ico">
+                                        <i class="fa fa-tree"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <h5>Garden</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 float-left">
+                        <div class="single_item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ico">
+                                        <i class="fas fa-basketball-ball"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <h5>Kiddies Play Area</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 float-left">
+                        <div class="single_item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ico">
+                                        <i class="fas fa-area-chart"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="">
+                                        <h5>Open Space</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="container" id="gallery">
+        <h3 style="padding: 20px" class="text-center">IMAGE GALLERY</h3>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="{% static 'image/bihargal1.jpg' %}" data-target="#image-gallery1">
+                    <img class="img-thumbnail" src="{% static 'image/bihargal1.jpg' %}" alt="" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="{% static 'image/bihargal2.jpg' %}" data-target="#image-gallery1">
+                    <img class="img-thumbnail" src="{% static 'image/bihargal2.jpg' %}" alt="" />
+                </a>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="{% static 'image/bihargal3.jpg' %}" data-target="#image-gallery1">
+                    <img class="img-thumbnail" src="{% static 'image/bihargal3.jpg' %}" alt="" />
+                </a>
+
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                    data-image="{% static 'image/bihargal4.jpg' %}" data-target="#image-gallery1">
+                    <img class="img-thumbnail" src="{% static 'image/bihargal4.jpg' %}" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="modal fade" id="image-gallery1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="image-gallery-title1"></h6>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="image-gallery-image1" class="img-responsive col-md-12" src="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" id="unit">
+    <h3 style="padding: 20px;" class="text-center">UNIT DETAILS</h3>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="First Floor | 435 sq.ft."
+                data-image="{% static 'image/biharprop1.jpg' %}" data-target="#image-gallery">
+                <img class="img-thumbnail" src="{% static 'image/biharprop1.jpg' %}" alt="" />
+            </a>
+            <div class="text">
+                <h6>First Floor</h6>
+                <h6>SBA: 435 sqft.</h6>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                    data-target="#myModal">Enquiry</button>
+
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6 thumb">
+
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Ground Floor | 472.86 sq.ft."
+                data-image="{% static 'image/biharprop2.jpg' %}" data-target="#image-gallery">
+                <img class="img-thumbnail" src="{% static 'image/biharprop2.jpg' %}" alt="" />
+            </a>
+
+            <div class="text">
+                <h6>Ground Floor</h6>
+                <h6>SBA: 472.86 sqft.</h6>
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                    data-target="#myModal">Enquiry</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <p><b>First Floor : </b></p>
+            <p><b>Bedroom:</b>12'4" X 10'10"<b> | Toilet:</b>5'11" X 4'1" <b> | Bedroom:</b>10'5 X 11'9"</p>
+
+            <p><b>Toilet:</b>5'11" X 4'1"<b> | Study Room:</b>8'9" X 9'5"<b> | Balcony:</b>9'6" X 7'8"</p>
+
+        </div>
+        <div class="col-md-6">
+            <p><b>Ground Floor : </b></p>
+            <p><b>Kitchen:</b>8'9" X 9'5"<b> | Bedroom:</b>12'04" X 10'10" <b> | Dining:</b>11'9 X 9'5"</p>
+
+            <p><b>Living Room:</b>10'5" X 11'9"<b> | Toilet:</b>5'11" X 4'1"<b></p>
+
+        </div>
+    </div>
+    <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title" id="image-gallery-title"></h6>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary float-left" id="show-previous-image">
+                        <i class="fa fa-arrow-left"></i>
+                    </button>
+
+                    <button type="button" id="show-next-image" class="btn btn-secondary float-right">
+                        <i class="fa fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="container text-center my-3" id="map">
+    <h3 style="padding: 20px">MAP VIEW</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14437.217978846746!2d85.50472366990833!3d25.226667203455897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f28cada4849fbf%3A0xefca5398aa1de143!2sSohsarai%2C%20Bihar%20Sharif%2C%20Bihar%20803118!5e0!3m2!1sen!2sin!4v1602930147847!5m2!1sen!2sin"
+                width="100%" height="450" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+    </div>
+</div>
+<div class="container" id="contact" style="margin-top: 20px">
+    <div class="row">
+
+        <div class="col-md-12 contact">
+            <h3 style="padding: 20px;" class="text-center">CONTACT US</h3>
+            <div class="row">
+                <div class="col-md-8">
+                    <form method="POST" action="{% url 'bihar_property_contactpage' %}">
+                        {% csrf_token %}
+                        <div class="form-group row">
+                            <label for="inputName" class="control-label col-sm-2 text-right">
+                                Name
+                                <span id="RequiredFieldValidator4" style="color:Red;visibility:hidden;">*</span>
+                            </label>
+                            <div class="col-sm-10">
+                                <input name="name" type="text" id="txtName" class="form-control"
+                                    placeholder="Your Name" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputName" class="control-label col-sm-2 text-right">
+                                Email
+                                <span id="RequiredFieldValidator3" style="color:Red;visibility:hidden;">*</span>
+                            </label>
+                            <div class="col-sm-10">
+                                <input name="email" type="text" id="txtEmail" class="form-control"
+                                    placeholder="Email" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputName" class="control-label col-sm-2 text-right">
+                                Mobile
+                                <span id="RequiredFieldValidator2" style="color:Red;visibility:hidden;">*</span>
+                            </label>
+                            <div class="col-sm-10">
+                                <input name="mobile_no" type="text" id="txtMobile" class="form-control"
+                                    placeholder="Mobile No." />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputName" class="control-label col-sm-2 text-right">
+                                Message
+                                <span id="RequiredFieldValidator1" style="color:Red;visibility:hidden;">*</span>
+                            </label>
+                            <div class="col-sm-10">
+                                <textarea name="message" rows="2" cols="20" id="txtMessage" class="form-control"
+                                    placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2"></label>
+                            <div class="col-sm-10">
+                                <input type="submit" name="btnSubmit" value="Submit Your Details" id="btnSubmit"
+                                    class="btn btn-danger" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                Schedule a Site Visit</button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 20px 0px; margin-top: 10px">
+                        <div class="col-md-12">
+                            <h6><b>Umeed Nagar Township</b></h6>
+                            <p>Near K.S.T. College, Noorsarai Road, Sohsarai, Biharsharif, Nalanda - 803118</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "homeapp/footer.html" %}
+{% include "homeapp/modal.html" %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+
+<!-- Owl Carousel -->
+<script src="{% static 'js/owl.js' %}"></script>
+<!-- wow js -->
+<script src="{% static 'js/animate.js' %}"></script>
+<script src="{% static 'js/flexslider.js' %}"></script>
+<script src="{% static 'js/nice.js' %}"></script>
+<script>
+    new WOW().init();
+</script>
+<!-- general script file -->
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+</form>
+</body>
+
+</html>

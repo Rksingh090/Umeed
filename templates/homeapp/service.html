@@ -1,0 +1,49 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block body %}
+{% include 'homeapp/navbar.html' %}
+{% include 'homeapp/modal.html' %}
+
+<div class="innerHeading">
+    <div class="container">
+        <h1>Our Services</h1>
+    </div>
+</div>
+<!--Inner Heading End-->
+
+<!--Inner Content Start-->
+<div class="innercontent" style="padding-top: 30px; padding-bottom: 20px">
+    <div class="container">
+        <div class="row aboutWrap">
+            <div class="col-lg-6">
+                <div class="aboutImg">
+                    <img alt="" src="{% static 'image/service.jpg' %}" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about_box">
+                    <div class="title">
+                        <h3>Umeed Nagar Township Services</h3>
+                    </div>
+                    <p class="text-justify">
+                        Our services at Umeed Nagar Township after sales, wing is there beside you right from the time
+                        of handing over your home. All repairs and maintenance that may be needed for electrical,
+                        plumbing fixtures and other finishing items.
+                    </p>
+                    <p class="text-justify">
+                        Periodical inspection of installations like lift, fire fighting equipments etc. and
+                        demonstration of the same to residents. The upkeep of premises and amenities till the residents
+                        association takes over.
+                    </p>
+                    <p><i class="fa fa-envelope"></i>&nbsp;<a
+                            href="mailto:rishab.w.singh1234@gmail.com">rishab.w.singh1234@gmail.com</a></p>
+                    <p>
+                        <i class="fa fa-phone-alt"></i>&nbsp;<a href="tel:9022489938">+91-9022489938</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'homeapp/footer.html' %}
+{% endblock  %}

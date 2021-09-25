@@ -1,0 +1,80 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block body %}
+{% include 'homeapp/navbar.html' %}
+{% include 'homeapp/modal.html' %}
+
+<!--Inner Heading Start-->
+<div class="innerHeading">
+    <div class="container">
+        <h1>Careers</h1>
+    </div>
+</div>
+<!--Inner Heading End-->
+
+<!--Inner Content Start-->
+<form action="{% url 'careerpage' %}" method="POST" enctype="multipart/form-data">
+    <div class="innercontent wow fadeInUp" style="padding-top: 20px">
+        <div class="container">
+            <div class="getTouch">Submit Your Resume</div>
+            <div class="row formcol">
+                <div class="col-lg-7">
+                    <div class="messages"></div>
+                    <div class="controls">
+                        <div class="row">
+                            {% csrf_token %}
+                            <div class="col-lg-6">
+                                <div class="form-group has-error has-danger">
+                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator1"
+                                        style="color:Red;display:none;">*</span>
+                                    <input name="name" type="text" class="form-control" placeholder="Your Name" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator2"
+                                        style="color:Red;display:none;">*</span>
+                                    <input name="email" type="text" class="form-control" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator3"
+                                        style="color:Red;display:none;">*</span>
+                                    <input name="mobile_no" type="text" class="form-control" placeholder="Phone" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator4"
+                                        style="color:Red;display:none;">*</span>
+                                    <input type="file" name="filename" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <span id="ctl00_ContentPlaceHolder1_RequiredFieldValidator5"
+                                        style="color:Red;display:none;">*</span>
+                                    <textarea name="message" rows="3" cols="20" class="form-control"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 contact-wrap" style="margin-bottom:20px">
+                                <div class="contact-btn">
+                                    <input type="submit" value="Submit Now" class="sub" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-5">
+                    <img src="{% static 'image/career.jpg' %}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!--Inner Content End-->
+{% include 'homeapp/footer.html' %}
+{% endblock %}

@@ -1,0 +1,1304 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-in">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+    <link href="{% static 'css/all.css' %}" rel="stylesheet" />
+    <!-- Owl Carousel CSS -->
+    <link href="{% static 'css/owl.css' %}" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/nice.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" />
+    <link href="{% static 'css/stylemain.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style4.css' %}" rel="stylesheet" />
+
+    <title>
+        Umeed Nagar Township
+    </title>
+    <style type="text/css">
+        @media(max-width:768px) {
+            .col-sm-6 {
+                text-align: left;
+                /*padding-left: 30px;*/
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 576px) {
+            .modal-dialog {
+                max-width: 600px;
+                margin: 1.75rem auto;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            font-size: 14px;
+            padding: 10px 12px;
+            color: #727280;
+            text-transform: capitalize;
+            z-index: 1000;
+            font-weight: normal;
+        }
+
+        .navbar li {
+            line-height: inherit;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            float: left;
+        }
+
+        .cntc {
+            background: #b71c1c;
+            color: #fff !important;
+            border-radius: 10px;
+        }
+
+        .navbar-light .navbar-nav .active>.cntc,
+        .i {
+            color: #fff !important;
+        }
+
+        .contact {
+            min-height: 20px;
+            padding: 19px;
+            margin-bottom: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #e3e3e3;
+            border-radius: 0px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <style type="text/css">
+        .btn:focus,
+        .btn:active,
+        button:focus,
+        button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .fa {
+            color: #000000;
+            font-size: 11px;
+        }
+
+        #image-gallery .modal-footer {
+            display: block;
+        }
+
+        .thumb {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            left: 20px;
+            bottom: 15px;
+            position: absolute;
+            left: 30px;
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        @media(min-width:992px) {
+            .flex-viewport {
+                max-height: 500px;
+                -webkit-transition: all 1s ease;
+                -moz-transition: all 1s ease;
+                -ms-transition: all 1s ease;
+                -o-transition: all 1s ease;
+                transition: all 1s ease;
+            }
+        }
+
+        .clr-row {
+            background: #15336e;
+            color: #fff;
+            padding-top: 10px;
+        }
+
+        .text-white {
+            color: #fff !important;
+        }
+
+        .media-heading {
+            margin: 0 0 5px;
+        }
+
+        h4,
+        .h4 {
+            font-size: 18px;
+        }
+
+        .media-body {
+            float: left !important;
+            padding-left: 10px;
+        }
+
+        @media (min-width: 1200px) {
+            .col-lg-2 {
+                width: 18%;
+            }
+        }
+
+        .flexslider {
+            border: 0px;
+        }
+
+        p span {
+            color: #333;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .single_item {
+            background: #f7f7f7;
+            padding: 28px 0 25px 0;
+            margin: 0px 10px;
+            /*width: 290.75px;*/
+            text-align: center;
+        }
+
+        .ico i {
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .ico {
+            width: 70px;
+            height: 70px;
+            position: relative;
+            left: calc(50% - 35px);
+            background: #e4000f;
+            text-align: center;
+            color: #fff;
+            border-radius: 40%;
+            padding-top: 20px;
+            position: static;
+            margin: 0 auto 19px auto;
+            -webkit-border-radius: 50%;
+        }
+
+        .text>h5 {
+            color: #252525;
+        }
+    </style>
+    <script type="text/javascript">
+        let modalId = $('#image-gallery');
+
+        $(document)
+            .ready(function () {
+
+                loadGallery(true, 'a.thumbnail');
+
+                //This function disables buttons when needed
+                function disableButtons(counter_max, counter_current) {
+                    $('#show-previous-image, #show-next-image')
+                        .show();
+                    if (counter_max === counter_current) {
+                        $('#show-next-image')
+                            .hide();
+                    } else if (counter_current === 1) {
+                        $('#show-previous-image')
+                            .hide();
+                    }
+                }
+
+                function loadGallery(setIDs, setClickAttr) {
+                    let current_image,
+                        selector,
+                        counter = 0;
+
+                    $('#show-next-image, #show-previous-image')
+                        .click(function () {
+                            if ($(this)
+                                .attr('id') === 'show-previous-image') {
+                                current_image--;
+                            } else {
+                                current_image++;
+                            }
+
+                            selector = $('[data-image-id="' + current_image + '"]');
+                            updateGallery(selector);
+                        });
+
+                    function updateGallery(selector) {
+                        let $sel = selector;
+                        current_image = $sel.data('image-id');
+                        $('#image-gallery-title')
+                            .text($sel.data('title'));
+                        $('#image-gallery-image')
+                            .attr('src', $sel.data('image'));
+                        disableButtons(counter, $sel.data('image-id'));
+                    }
+
+                    if (setIDs == true) {
+                        $('[data-image-id]')
+                            .each(function () {
+                                counter++;
+                                $(this)
+                                    .attr('data-image-id', counter);
+                            });
+                    }
+                    $(setClickAttr)
+                        .on('click', function () {
+                            updateGallery($(this));
+                        });
+                }
+            });
+
+        // build key actions
+        $(document)
+            .keydown(function (e) {
+                switch (e.which) {
+                    case 37: // left
+                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                            $('#show-previous-image')
+                                .click();
+                        }
+                        break;
+
+                    case 39: // right
+                        if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                            $('#show-next-image')
+                                .click();
+                        }
+                        break;
+
+                    default:
+                        return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+
+    </script>
+    <script type="text/javascript">
+        let modalId1 = $('#image-gallery1');
+
+        $(document)
+            .ready(function () {
+
+                loadGallery(true, 'a.thumbnail');
+
+                //This function disables buttons when needed
+                function disableButtons(counter_max, counter_current) {
+                    $('#show-previous-image1, #show-next-image1')
+                        .show();
+                    if (counter_max === counter_current) {
+                        $('#show-next-image1')
+                            .hide();
+                    } else if (counter_current === 1) {
+                        $('#show-previous-image1')
+                            .hide();
+                    }
+                }
+
+                function loadGallery(setIDs, setClickAttr) {
+                    let current_image,
+                        selector,
+                        counter = 0;
+
+                    $('#show-next-image1, #show-previous-image1')
+                        .click(function () {
+                            if ($(this)
+                                .attr('id') === 'show-previous-image1') {
+                                current_image--;
+                            } else {
+                                current_image++;
+                            }
+
+                            selector = $('[data-image-id="' + current_image + '"]');
+                            updateGallery(selector);
+                        });
+
+                    function updateGallery(selector) {
+                        let $sel = selector;
+                        current_image = $sel.data('image-id1');
+                        $('#image-gallery-title1')
+                            .text($sel.data('title'));
+                        $('#image-gallery-image1')
+                            .attr('src', $sel.data('image'));
+                        disableButtons(counter, $sel.data('image-id1'));
+                    }
+
+                    if (setIDs == true) {
+                        $('[data-image-id1]')
+                            .each(function () {
+                                counter++;
+                                $(this)
+                                    .attr('data-image-id1', counter);
+                            });
+                    }
+                    $(setClickAttr)
+                        .on('click', function () {
+                            updateGallery($(this));
+                        });
+                }
+            });
+
+        // build key actions
+        $(document)
+            .keydown(function (e) {
+                switch (e.which) {
+                    case 37: // left
+                        if ((modalId1.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                            $('#show-previous-image1')
+                                .click();
+                        }
+                        break;
+
+                    case 39: // right
+                        if ((modalId1.data('bs.modal') || {})._isShown && $('#show-next-image1').is(":visible")) {
+                            $('#show-next-image1')
+                                .click();
+                        }
+                        break;
+
+                    default:
+                        return; // exit this handler for other keys
+                }
+                e.preventDefault(); // prevent the default action (scroll / move caret)
+            });
+
+    </script>
+</head>
+
+<body>
+    {% include "homeapp/modal.html" %}
+    <div class="header-wrap wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 navbar navbar-expand-lg navbar-light ">
+                    <div class="header_logo">
+                        <img src="{% static 'image/umeednagar.png' %}" />
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                </div>
+                <div class="col-lg-10">
+                    <nav class="navbar navbar-expand-lg navbar-light text-left">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <button class="close-toggler" type="button" data-toggle="offcanvas"><span><i
+                                        class="fas fa-times-circle" aria-hidden="true"></i></span></button>
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="{% url 'homepage' %}">Home </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#about">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#amenties">Amenities</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#unit">Unit Details </a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#gallery">Gallery </a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#map">Map View </a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Downloads <span class="caret"><i
+                                                class="fas fa-caret-down"></i></span></a><i
+                                        class="fas fa-caret-down"></i>
+                                    <ul class="submenu">
+                                        <li><a href="#">Brochure</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item active " style="margin-left: 10px">
+                                    <button type="button" class="nav-link cntc" data-toggle="modal"
+                                        data-target="#myModal" style="border: red"><i
+                                            class="fa fa-envelope i"></i>&nbsp;Click Here to Contact Us</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header End-->
+    <div class="innercontent">
+        <div class="row">
+            <div class="col-lg-12" style="padding:0px">
+                <div id="slider" class="flexslider wow fadeInUp">
+                    <ul class="slides">
+                        <li>
+                            <img alt="" src="{% static 'image/patnaslide1.jpg' %}" />
+                        </li>
+                        <li>
+                            <img alt="" src="{% static 'image/patnaslide2.jpg' %}" />
+                        </li>
+                        <li>
+                            <img alt="" src="{% static 'image/patnaslide3.jpg' %}" />
+                        </li>
+
+                        <li>
+                            <img alt="" src="{% static 'image/patnaslide4.jpg' %}" />
+                        </li>
+                        <li>
+                            <img alt="" src="{% static 'image/patnaslide5.jpg' %}" />
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section class="clr-row">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <ul class="media-list">
+                            <li class="media"><a href="#" class="pull-left">
+                                    <img src="{% static 'image/location.png' %}" class="media-object"
+                                        alt="Sample Image">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Address</h4>
+                                    Patna, Bihar
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
+                        <ul class="media-list">
+                            <li class="media"><a href="#" class="pull-left">
+                                    <img src="{% static 'image/bed.png' %}" class="media-object" alt="Sample Image">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Bedroom
+                                    </h4>
+                                    2 & 3 BHK
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+                        <ul class="media-list">
+                            <li class="media"><a href="#" class="">
+                                    <img src="{% static 'image/area.png' %}" class="media-object" alt="Sample Image">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Area Range
+                                    </h4>
+                                    1298 to 1764 sqft.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6">
+                        <ul class="media-list">
+                            <li class="media"><a href="#" class="pull-left">
+                                    <img src="{% static 'image/price.png' %}" class="media-object" alt="Sample Image">
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Price</h4>
+                                    On Request
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-sm-6 col-xs-6 ">
+                        <ul class="media-list">
+                            <li class="media"><a href="#" class="pull-left">
+                                    <img src="{% static 'image/projectkey.png' %}" class="media-object"
+                                        alt="Sample Image" />
+                                </a>
+                                <div class="media-body">
+                                    <h4 class="media-heading">Project Type</h4>
+                                    Gated Campus
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container" id="about">
+            <div class="row property_head wow fadeInUp" style="padding-top: 20px">
+                <div class="col-lg-12 col-md-12">
+                    <h3 class="text-center">UMEED NAGAR TOWNSHIP</h3>
+                    <div class="property_address text-center">Patna, Bihar</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="">
+                        <div class="">
+                            <p class="text-justify">
+                                Umeed Nagar Township Provides a Great Life !!
+                                Step in to your luxury home in Patna, Bihar.
+                                Nestled in 2.5 acres of prime real estate, in the fast growing locality of Patna,
+                                Umeed NagarTownship ushers in a lifestyle that is modern, luxurious and convenient.
+                                Uniquely designed and aesthetically proportional. Umeed Nagar Township offers 2 & 3
+                                BHK Spacious apartments with numerous delightful benefits.
+                                Gathering all the advantages of Patna, Umeed Nagar Township is a unique
+                                constellation of all the conveniences tagged with best connectivity. It is surely a
+                                world within reach. All in all it can be rightfully called a complete family
+                                package!
+
+                                From a well-appointed community hall, Swimming Pool, exquisitelandscape gardens and
+                                outdoor sports, the array of privileges here, make it the perfect place to live.
+                                An oasis of calm in the mornings, the perfect party venue on weekends. Enjoy a
+                                wonderful lifestyle at Umeed Nagar Township.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="{% static 'image/patnaimage1.jpg' %}" class="img-fluid"
+                        style="width: 547px; height: 247px" />
+                </div>
+            </div>
+            <div class="row" style="padding-top: 30px; padding-bottom: 20px">
+                <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6 ">
+                    <p class="cols">
+                        Project Area<br />
+                        <span>2.5 Acres</span>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6">
+                    <p class="cols">
+                        Total No. of Tower<br />
+                        <span>5 Towers</span>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                    <p class="cols">
+                        Total No. of Floors<br />
+                        <span>G+10</span>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                    <p class="cols">
+                        Total Units<br />
+                        <span>200</span>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                    <p class="cols">
+                        Project Type<br />
+                        <span>Gated Campus</span>
+                    </p>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6  col-xs-6">
+                    <p class="cols">
+                        Open Space in Project<br />
+                        <span>40 %</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="container text-center my-3" id="amenties">
+            <h3 style="padding: 20px">AMENITIES</h3>
+            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                <div class="carousel-inner w-100" role="listbox">
+                    <div class="carousel-item row no-gutters active">
+                        <div class="col-3  float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fa fa-bank"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Temple</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fa fa-video"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>CCTV Surviellience </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fa fa-tree"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Garden</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fas fa-basketball-ball"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Kiddies Play Area</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item row no-gutters">
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fa fa-bank"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Community Hall</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fas fa-running"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Jogging Track</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fa fa-arrow-up"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Lift</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 float-left">
+                            <div class="single_item">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="ico">
+                                            <i class="fa fa-water"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <h5>Swimming Pool</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                    <span><i style="color: #000000;" class="fas fa-arrow-left"></i></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                    <span><i style="color: #000000;" class="fas fa-arrow-right"></i></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="container" id="gallery">
+            <h3 style="padding: 20px" class="text-center">IMAGE GALLERY</h3>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnagal1.jpg' %}" data-target="#image-gallery1">
+                        <img class="img-thumbnail" src="{% static 'image/patnagal1.jpg' %}" alt="" />
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnagal2.jpg' %}" data-target="#image-gallery1">
+                        <img class="img-thumbnail" src="{% static 'image/patnagal2.jpg' %}" alt="" />
+                    </a>
+
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnagal3.jpg' %}" data-target="#image-gallery1">
+                        <img class="img-thumbnail" src="{% static 'image/patnagal3.jpg' %}" alt="" />
+                    </a>
+
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnagal4.jpg' %}" data-target="#image-gallery1">
+                        <img class="img-thumbnail" src="{% static 'image/patnagal4.jpg' %}" alt="" />
+                    </a>
+                </div>
+            </div>
+            <div class="modal fade" id="image-gallery1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="image-gallery-title1"></h6>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="image-gallery-image1" class="img-responsive col-md-12" src="" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary float-left" id="show-previous-image1">
+                                <i class="fa fa-arrow-left"></i>
+                            </button>
+
+                            <button type="button" id="show-next-image1" class="btn btn-secondary float-right">
+                                <i style="color: black;" class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" id="unit">
+        <h3 style="padding: 20px;" class="text-center">UNIT DETAILS</h3>
+        <div class="row">
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-12">
+                    <div class="title text-center">
+                        <h3 style="text-align: center">Block A - Floor & Unit Details</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="2 BHK | SBA: 1489 sqft. | Bathroom: 2 | Balcony: 1 | Bedroom: 2"
+                        data-image="{% static 'image/patnafloor1.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor1.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Unit Details</h6>
+                        <h6>SBA: 1489 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor2.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor2.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Floor Details</h6>
+                        <h6>SBA: 1489 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="2 BHK | SBA: 1540 sqft. | Bathroom: 2 | Balcony: 1 | Bedroom: 2"
+                        data-image="{% static 'image/patnafloor3.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor3.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Unit Details</h6>
+                        <h6>SBA: 1540 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor4.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor4.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Floor Details</h6>
+                        <h6>SBA: 1540 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-12">
+                    <div class="title text-center">
+                        <h3 style="text-align: center">Block B - Floor & Unit Details</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="3 BHK | SBA: 1710 sqft. | Bathroom: 3 | Balcony: 2 | Bedroom: 3"
+                        data-image="{% static 'image/patnafloor1.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor1.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Unit Details</h6>
+                        <h6>SBA: 1710 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor2.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor2.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Floor Details</h6>
+                        <h6>SBA: 1710 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="3 BHK | SBA: 1764 sqft. | Bathroom: 2 | Balcony: 3 | Bedroom: 3"
+                        data-image="{% static 'image/patnafloor3.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor3.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Unit Details</h6>
+                        <h6>SBA: 1764 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor4.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor4.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Floor Details</h6>
+                        <h6>SBA: 1764 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-12">
+                    <div class="title text-center">
+                        <h3 style="text-align: center">Block C - Floor & Unit Details</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="3 BHK | SBA: 1710 sqft. | Bathroom: 3 | Balcony: 2 | Bedroom: 3"
+                        data-image="{% static 'image/patnafloor1.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor1.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Unit Details</h6>
+                        <h6>SBA: 1710 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor2.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor2.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Floor Details</h6>
+                        <h6>SBA: 1710 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="3 BHK | SBA: 1764 sqft. | Bathroom: 2 | Balcony: 3 | Bedroom: 3"
+                        data-image="{% static 'image/patnafloor3.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor3.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Unit Details</h6>
+                        <h6>SBA: 1764 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor4.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor4.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>3 BHK | Floor Details</h6>
+                        <h6>SBA: 1764 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-12">
+                    <div class="title text-center">
+                        <h3 style="text-align: center">Block D - Floor & Unit Details</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="2 BHK | SBA: 1489 sqft. | Bathroom: 2 | Balcony: 1 | Bedroom: 2"
+                        data-image="{% static 'image/patnafloor1.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor1.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Unit Details</h6>
+                        <h6>SBA: 1489 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor2.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor2.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Floor Details</h6>
+                        <h6>SBA: 1489 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="2 BHK | SBA: 1350 sqft. | Bathroom: 2 | Balcony: 1 | Bedroom: 2"
+                        data-image="{% static 'image/patnafloor3.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor3.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Unit Details</h6>
+                        <h6>SBA: 1350 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor4.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor4.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Floor Details</h6>
+                        <h6>SBA: 1350 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-12">
+                    <div class="title text-center">
+                        <h3 style="text-align: center">Block E - Floor & Unit Details</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="2 BHK | SBA: 1350 sqft. | Bathroom: 2 | Balcony: 1 | Bedroom: 2"
+                        data-image="{% static 'image/patnafloor1.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor1.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Unit Details</h6>
+                        <h6>SBA: 1350 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor2.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor2.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Floor Details</h6>
+                        <h6>SBA: 1350 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+                        data-title="2 BHK | SBA: 1298 sqft. | Bathroom: 2 | Balcony: 1 | Bedroom: 2"
+                        data-image="{% static 'image/patnafloor3.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor3.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Unit Details</h6>
+                        <h6>SBA: 1298 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+
+                    <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                        data-image="{% static 'image/patnafloor4.jpg' %}" data-target="#image-gallery">
+                        <img class="img-thumbnail" src="{% static 'image/patnafloor4.jpg' %}" alt="" />
+                    </a>
+                    <div class="text">
+                        <h6>2 BHK | Floor Details</h6>
+                        <h6>SBA: 1298 sqft.</h6>
+                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#myModal">Enquiry</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h6 class="modal-title" id="image-gallery-title"></h6>
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img id="image-gallery-image" class="img-responsive col-md-12" src="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary float-left" id="show-previous-image">
+                                <i class="fa fa-arrow-left"></i>
+                            </button>
+
+                            <button type="button" id="show-next-image" class="btn btn-secondary float-right">
+                                <i style="color: black;" class="fa fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center my-3" id="map">
+        <h3 style="padding: 20px">MAP VIEW</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14396.44464229986!2d85.22035577002796!3d25.567968246116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2a0898ecd075d%3A0x36d9bbe46de8cab8!2sRanipur%20Milki%20Chak%2C%20Bihar!5e0!3m2!1sen!2sin!4v1603188215947!5m2!1sen!2sin"
+                    width="100%" height="450" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact" style="margin-top: 20px">
+        <div class="row">
+            <div class="col-md-12 contact">
+                <h3 style="padding: 20px;" class="text-center">CONTACT US</h3>
+                <div class="row">
+                    <div class="col-md-8">
+                        <form action="{% url 'patna_property_contactpage' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <label for="inputName" class="control-label col-sm-2 text-right">
+                                    Name
+                                    <span id="RequiredFieldValidator4" style="color:Red;visibility:hidden;">*</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input name="name" type="text" id="txtName" class="form-control"
+                                        placeholder="Your Name" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputName" class="control-label col-sm-2 text-right">
+                                    Email
+                                    <span style="color:Red;visibility:hidden;">*</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input name="email" type="text" id="txtEmail" class="form-control"
+                                        placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputName" class="control-label col-sm-2 text-right">
+                                    Mobile
+                                    <span style="color:Red;visibility:hidden;">*</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <input name="mobile_no" type="text" id="txtMobile" class="form-control"
+                                        placeholder="Mobile No." />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputName" class="control-label col-sm-2 text-right">
+                                    Message
+                                    <span style="color:Red;visibility:hidden;">*</span>
+                                </label>
+                                <div class="col-sm-10">
+                                    <textarea name="message" rows="2" cols="20" id="txtMessage" class="form-control"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2"></label>
+                                <div class="col-sm-10">
+                                    <input type="submit" name="btnSubmit" value="Submit Your Details" id="btnSubmit"
+                                        class="btn btn-danger" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                    Schedule a Site Visit</button>
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 20px 0px; margin-top: 10px">
+                            <div class="col-md-12">
+                                <h6><b>Umeed Nagar Township</b></h6>
+                                <p>Ranipur milki chak, Mircha Road, Near Bypass thana, Patna-800008</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'homeapp/footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- Owl Carousel -->
+    <script src="{% static 'js/owl.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'js/animate.js' %}"></script>
+    <script src="{% static 'js/flexslider.js' %}"></script>
+    <script src="{% static 'js/nice.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- general script file -->
+    <script src="{% static 'js/wow.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block head %}
+<style type="text/css">
+    @media(max-width:768px) {
+        .col-sm-6 {
+            text-align: left;
+            padding-left: 30px;
+        }
+    }
+
+    .rent_info {
+        display: flex;
+        margin-top: 0px;
+    }
+</style>
+{% endblock  %}
+
+{% block body %}
+{% include 'homeapp/navbar.html' %}
+{% include 'homeapp/modal.html' %}
+<!-- Revolution slider start -->
+<div class="tp-banner-container">
+    <div class="tp-banner">
+        <ul>
+            <li data-slotamount="0" data-saveperformance="off">
+                <img alt="" src="{% static 'image/myimage.jpg' %}" />
+                <div class="caption lft large-title tp-resizeme slidertext2" data-x="center" data-y="150"
+                    data-speed="600" data-start="2200"><span>Your Dream Home Awaits</div>
+                <div class="caption lfb large-title tp-resizeme slidertext3" data-x="center" data-y="260"
+                    data-speed="600" data-start="2800">
+                    With Umeed Builder & Constructor Pvt. Ltd.
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Revolution slider end -->
+<!--Form Start-->
+
+<form action="{% url 'homepage' %}" method="POST">
+    {% csrf_token %}
+    <div class="form_sec slider-wrap  wow fadeInUp">
+        <div class="container">
+            <div class="form-wrap">
+                <div class="row">
+                    <div class="col-lg-3 cols">
+                        <div class="input-group origin">
+                            <input name="enqname" type="text" id="txtName_enq" class="form-control"
+                                placeholder="Your Name" />
+                        </div>
+                    </div>
+                    <div class="col-lg-2 cols">
+                        <div class="input-group destination">
+                            <input name="enqmobileno" type="text" id="txtMobile_enq" class="form-control"
+                                placeholder="Mobile" />
+                        </div>
+                    </div>
+                    <div class="col-lg-3 cols">
+                        <div class="input-group">
+                            <select name="enqproperty" id="ddlProperty" class="form-control list">
+                                <option value="Property Type">Property Type</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 cols">
+                        <div class="input-group">
+                            <select name="enqbudget" id="ddlBudget" class="form-control list">
+                                <option value="Budget">Budget</option>
+                                <option value="45-55 Lacs">45-55 Lacs</option>
+                                <option value="55-65 Lacs">55-65 Lacs</option>
+                                <option value="65-75 Lacs">65-75 Lacs</option>
+                                <option value="75-85 Lacs">75-85 Lacs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="input-btn">
+                            <input type="submit" id="btnSearch" class="sbutn btn-block" value="Enquiry Now">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<!--Form End-->
+<!--Properties Start-->
+<div class="property-wrap wow fadeInUp">
+    <div class="container">
+        <div class="title">
+            <h1>PROJECT SHOWCASE</h1>
+        </div>
+
+        <!--Row Start-->
+        <ul class="row">
+            <!--col-lg-4 Start-->
+            <li class="col-lg-6">
+                <div class="property_box wow fadeInUp">
+                    <div class="propertyImg">
+                        <a href="{% url 'patnapage' %}">
+                            <img src="{% static 'image/image1.jpg' %}" alt="" />
+                        </a>
+                    </div>
+                    <div class="propert_info">
+                        <ul class="row">
+                            <li class="col-6">
+                                <div class="proprty_icon" style="font-size: 12px">
+                                    <i class="fa fa-building"></i>&nbsp;&nbsp;<span style="font-size: 12px">Umeed Nagar
+                                        Township</span>
+                                </div>
+
+                            </li>
+                            <li class="col-3">
+                                <div class="proprty_icon" style="font-size: 12px">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>&nbsp;&nbsp;<span
+                                        style="font-size: 12px">Patna</span>
+                                </div>
+
+                            </li>
+                            <li class="col-3">
+                                <div class="proprty_icon" style="font-size: 12px">
+                                    <i class="fa fa-rupee-sign"></i>&nbsp;&nbsp;<span>On Request</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rent_info">
+                        <div class="apart">Umeed Nagar Township</div>
+                        <div class="sale"><a href="{% url 'patnapage' %}" style="color: #fff">See Details &nbsp;<i
+                                    class="fa fa-chevron-circle-right"></i></a></div>
+                    </div>
+                </div>
+            </li>
+            <!--col-lg-4 End-->
+            <!--col-lg-4 Start-->
+            <li class="col-lg-6">
+                <div class="property_box wow fadeInUp">
+                    <div class="propertyImg">
+                        <a href="{% url 'biharpage' %}">
+                            <img src="{% static 'image/image2.jpg' %}" alt="" />
+                        </a>
+                    </div>
+                    <div class="propert_info">
+                        <ul class="row">
+                            <li class="col-6">
+                                <div class="proprty_icon" style="font-size: 12px">
+                                    <i class="fa fa-building"></i>&nbsp;&nbsp;<span style="font-size: 12px">Umeed Nagar
+                                        Township</span>
+                                </div>
+
+                            </li>
+                            <li class="col-3">
+                                <div class="proprty_icon" style="font-size: 12px">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>&nbsp;&nbsp;<span
+                                        style="font-size: 12px">Biharsharif</span>
+                                </div>
+
+                            </li>
+                            <li class="col-3">
+                                <div class="proprty_icon" style="font-size: 12px">
+                                    <i class="fa fa-rupee-sign"></i>&nbsp;&nbsp;<span>On Request</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rent_info">
+                        <div class="apart">Umeed Nagar Township</div>
+                        <div class="sale"><a href="{% url 'biharpage' %}" style="color: #fff">See Details
+                                &nbsp;<i class="fa fa-chevron-circle-right"></i></a></div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <!--Row End-->
+    </div>
+</div>
+<!--Properties End-->
+<section class="kf_num_counter_bg" style="margin-top: 30px; margin-bottom: 30px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-user"></i>
+                    <h2 class="counter">100</h2>
+                    <a href="#">Happy Client</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-building"></i>
+                    <h2 class="counter">5</h2>
+                    <a href="#">APARTMENTS</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-home"></i>
+                    <h2 class="counter">12</h2>
+                    <a href="#">Duplex</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-flag"></i>
+                    <h2 class="counter">3</h2>
+                    <a href="#">Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- popular start -->
+
+<!-- popular end -->
+<!--Properties rent Start-->
+
+<!--Properties End-->
+<!--Inner Content Start-->
+<div class="innercontent">
+    <h1 class="text-center">TESTIMONIAL</h1>
+    <div class="container">
+        <div class="testimonialswrp">
+            <ul class="row">
+                <li class="col-lg-6">
+                    <div class="testService wow fadeInUp">
+                        <div class="testi-info">
+                            <div class="client-image">
+                                <img src="images/client.jpg" alt="" />
+                            </div>
+                            <div class="name">Rishab Singh</div>
+                            <p>
+                                We are Really happy with the environment of the Umeed Nagar Township.
+                                Their Services are really good and appreciable.
+                            </p>
+
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-6">
+                    <div class="testService wow fadeInUp">
+                        <div class="testi-info">
+                            <div class="client-image">
+                                <img src="images/client.jpg" alt="">
+                            </div>
+                            <div class="name">Ankit Singh</div>
+                            <p>I am very happy with to associated with Umeed Nagar Township. It has the best services
+                                and good environment. </p>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--Inner Content End-->
+{% include "homeapp/footer.html" %}
+{% endblock %}

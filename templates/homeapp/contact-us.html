@@ -1,0 +1,84 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block body %}
+{% include 'homeapp/navbar.html' %}
+{% include 'homeapp/modal.html' %}
+
+<!--Inner Heading Start-->
+<div class="innerHeading">
+    <div class="container">
+        <h1>Contact Us</h1>
+    </div>
+</div>
+<!--Inner Heading End-->
+
+<!--Inner Content Start-->
+<div class="innercontent wow fadeInUp" style="padding-top: 20px">
+    <div class="container">
+
+        <div class="row formcol">
+            <div class="col-lg-4">
+                <div class="getTouch">Patna</div>
+                <p><b>Office Address :</b> Ranipur milki chak, Mircha Road, Near Bypass thana, Patna-800008</p>
+                <p><b>Site Location :</b> Ranipur milki chak, Mircha Road, Near Bypass thana, Patna-800008</p>
+
+                <div class="getTouch">Biharsharif</div>
+                <p><b>Office Address :</b>Umeed Builder & Constructor Pvt. Ltd. Oppo. Moti Memorial Hospital, Jabalpur,
+                    Sohsarai, Biharsharif, Nalanda</p>
+                <p><b>Site Location :</b>Near K.S.T. College, Noorsarai Road, Sohsarai, Biharsharif, Nalanda - 803118
+                </p>
+            </div>
+            <div class="col-lg-8">
+                <div class="getTouch">Get In Touch</div>
+                <div class="messages"></div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group has-error has-danger">
+                                    <span style="color:Red;display:none;">*</span>
+                                    <input name="name" type="text" id="ctl00_ContentPlaceHolder1_txtName"
+                                        class="form-control" placeholder="Your Name" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <span style="color:Red;display:none;">*</span>
+                                    <input name="email" type="text" class="form-control" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <span style="color:Red;display:none;">*</span>
+                                    <input name="mobile_no" type="text" class="form-control" placeholder="Phone" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <span style="color:Red;display:none;">*</span>
+                                    <input name="subject" type="text" class="form-control" placeholder="subject" />
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <span style="color:Red;display:none;">*</span>
+                                    <textarea name="message" rows="5" cols="20" class="form-control"
+                                        placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 contact-wrap" style="margin-bottom: 20px">
+                                <div class="contact-btn">
+                                    <input type="submit" value="Submit Now" class="sub" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Inner Content End-->
+{% include 'homeapp/footer.html' %}
+{% endblock  %}

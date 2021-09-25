@@ -1,0 +1,80 @@
+{% extends 'homeapp/base.html' %}
+{% load static %}
+{% block body %}
+{% include "homeapp/navbar.html" %}
+{% include 'homeapp/modal.html' %}
+<div class="innerHeading">
+    <div class="container">
+        <h1>About Us</h1>
+    </div>
+</div>
+<!--Inner Heading End-->
+
+<!--Inner Content Start-->
+<div class="innercontent" style="padding-top: 30px; padding-bottom: 20px">
+    <div class="container">
+        <div class="row aboutWrap">
+            <div class="col-lg-6">
+                <div class="aboutImg">
+                    <img alt="" src="{% static 'image/about1.jpg' %}" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about_box">
+                    <div class="title">
+                        <h3>About Umeed Nagar Township</h3>
+                    </div>
+                    <p class="text-justify">
+                        Umeed Builder & Constructor is proud to present to you - <b>Umeed Nagar Township</b>. It is
+                        Specially Curated Society with state-of-the art facilities which is designed keeping you, and
+                        your family in mind. The Living spaces are made in a way so as to bring maximum comfort and
+                        efficiency to you everyday life.
+                    </p>
+                    <p class="text-justify">
+                        Each house is placed in a way that gives you the secure, cozy feeling of living in a community.
+                        Be it your kids, or the elderly people of the family, there's something for everyone! Situated
+                        at one of the prime locations in Nalanda, <b>Umeed is here to give a home to your dreams!</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<section class="kf_num_counter_bg" style="margin-top:30px; margin-bottom:30px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-user"></i>
+                    <h2 class="counter">100</h2>
+                    <a href="#">Happy Client</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-building"></i>
+                    <h2 class="counter">5</h2>
+                    <a href="#">APARTMENTS</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-home"></i>
+                    <h2 class="counter">12</h2>
+                    <a href="#">Duplex</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="kf_num_count_wrap">
+                    <i class="fa fa-flag"></i>
+                    <h2 class="counter">3</h2>
+                    <a href="#">Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'homeapp/footer.html' %}
+{% endblock %}

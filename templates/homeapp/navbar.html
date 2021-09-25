@@ -1,0 +1,86 @@
+{% load static %}
+
+
+<!--Topbar Start-->
+<div class="topbar-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-4">
+                <ul class="social_media style_none">
+                    <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-8">
+                <div class="top_right">
+                    <div class="topbar_phone"><a href="#"><i class="fas fa-phone-alt"
+                                aria-hidden="true"></i>+91-9022489938 &nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+                    <div class="topbar_phone"><a href="#"><i class="fas fa-envelope"
+                                aria-hidden="true"></i>rishab.w.singh1234@gmail.com </a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Topbar End-->
+<!--Header Start-->
+<div class="header-wrap wow fadeInUp">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 navbar navbar-expand-lg navbar-light">
+                <div class="header_logo">
+                    <a href="#">
+                        <img alt="" src="{% static 'image/logo.png' %}" /></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            </div>
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <button class="close-toggler" type="button" data-toggle="offcanvas"><span><i
+                                    class="fas fa-times-circle" aria-hidden="true"></i></span></button>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'aboutpage' %}">About Us </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Projects <span class="caret"><i
+                                            class="fas fa-caret-down"></i></span></a><i class="fas fa-caret-down"></i>
+                                <ul class="submenu">
+                                    <li><a href="Patna-property">Patna</a></li>
+                                    <li><a href="{% url 'biharpage' %}">Biharsharif</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'servicepage' %}">Services</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'technologypage' %}">Technology </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'careerpage' %}">Career</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'contactpage' %}">Contact Us</a>
+                            </li>
+                            <li class="nav-item" style="margin-left: 10px">
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                    Request Site Visit</button>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Header End-->
